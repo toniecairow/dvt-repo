@@ -8,6 +8,7 @@ import { ArtistsDetailViewComponent } from './pages/artists-detail-view/artists-
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { TrackComponent } from './components/track/track.component';
 import { AlbumComponent } from './components/album/album.component';
+import { ArtistComponent } from './components/artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlbumComponent } from './components/album/album.component';
     ArtistsDetailViewComponent,
     TopNavComponent,
     TrackComponent,
-    AlbumComponent
+    AlbumComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
