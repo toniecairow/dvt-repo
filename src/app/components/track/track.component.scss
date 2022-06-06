@@ -1,0 +1,8 @@
+.track{
+    font-size: 17px;
+    padding: 20px 0px;
+    border-bottom: 2.5px solid grey;
+    &:last-child{
+        border-bottom: none;
+    }
+}
