@@ -1,1 +1,19 @@
-<app-top-nav></app-top-nav>
+<app-top-nav
+    [showSearch]="true"
+    (onArtistsRetrieved)="onArtistsRetrieved($event)"
+></app-top-nav>
+
+<div class="row">
+    <div class="col-md-3 col-12" *ngFor="let artist of filteredArtists | async">
+        <a [routerLink]="['/artists/'+ artist?.id]">
+            <div class="album-cover">
+                <img [src]="artist?.picture_big" alt="picture">
+            </div>
+            <div class="my-3">
+                <h5>{{ artist?.name }}</h5>
+                <h6> <b>{{ artist?.nb_fan | number }}</b> Fans </h6>
+                <h6> <b>{{ artist?.nb_album | number }}</b> Albums </h6>
+            </div>
+        </a>
+    </div>
+</div>
