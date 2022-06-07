@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 102.0.5005.61 (Linux x86_64)" package="unit" timestamp="2022-06-07T01:23:47" id="0" hostname="toniecairow-PC" tests="9" errors="0" failures="0" time="0.213">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36"/>
+  </properties>
+  <testcase name="Track should create an instance" time="0.008" classname="unit.Track"/>
+  <testcase name="ArtistsDetailViewComponent should create" time="0.107" classname="unit.ArtistsDetailViewComponent"/>
+  <testcase name="TrackComponent should create" time="0.029" classname="unit.TrackComponent"/>
+  <testcase name="Artist should create an instance" time="0.002" classname="unit.Artist"/>
+  <testcase name="TopNavComponent should create" time="0.028" classname="unit.TopNavComponent"/>
+  <testcase name="AppComponent should create the app" time="0.013" classname="unit.AppComponent"/>
+  <testcase name="Album should create an instance" time="0" classname="unit.Album"/>
+  <testcase name="ArtistsListViewComponent should create" time="0.021" classname="unit.ArtistsListViewComponent"/>
+  <testcase name="DeezerDatasourceService should be created" time="0.005" classname="unit.DeezerDatasourceService"/>
+  <system-out>
+    <![CDATA[Chrome 102.0.5005.61 (Linux x86_64) ERROR: 'NG0304: 'app-top-nav' is not a known element:
+1. If 'app-top-nav' is an Angular component, then verify that it is part of this module.
+2. If 'app-top-nav' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome 102.0.5005.61 (Linux x86_64) ERROR: 'NG0304: 'app-top-nav' is not a known element:
+1. If 'app-top-nav' is an Angular component, then verify that it is part of this module.
+2. If 'app-top-nav' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome 102.0.5005.61 (Linux x86_64) ERROR: 'NG0303: Can't bind to 'showSearch' since it isn't a known property of 'app-top-nav'.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
