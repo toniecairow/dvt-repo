@@ -13,7 +13,7 @@ import { DeezerDatasourceService } from 'src/app/services/deezer-datasource/deez
 export class TopNavComponent implements OnInit, OnDestroy {
   subscription = new Subscription();
   searchControl = new FormControl('');
-  @Output() onArtistsRetrieved = new EventEmitter<any>();
+  @Output() artistsRetrieved = new EventEmitter<any>();
   @Input() showSearch = false;
 
   constructor(
@@ -28,12 +28,12 @@ export class TopNavComponent implements OnInit, OnDestroy {
         distinctUntilChanged()
       ).subscribe(val => {
         let  artists = new Observable();
-        if(val || (val?.trim() !== '')){
+        if (val || (val?.trim() !== '')){
           const params = new HttpParams().set('q', val);
           artists = this.deezerDataSourceService.searchArtists(params);
-          this.onArtistsRetrieved.emit(artists);
+          this.artistsRetrieved.emit(artists);
         }
-        this.onArtistsRetrieved.emit(artists);
+        this.artistsRetrieved.emit(artists);
       })
     );
   }

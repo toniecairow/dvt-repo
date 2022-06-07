@@ -10,5 +10,5 @@ export class Artist {
     picture_small?: string;
     picture_xl?: string;
     radio?: boolean;
-    type?: string;     
+    type?: string;
 }

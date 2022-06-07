@@ -15,7 +15,7 @@ export class ArtistsListViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onArtistsRetrieved($event: Observable<Artist[]>){
+  artistsRetrieved($event: Observable<Artist[]>): void{
     this.filteredArtists = $event;
   }
 
