@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-track',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./track.component.scss']
 })
 export class TrackComponent implements OnInit {
+  @Input() track: any;
+  @Input() i: any;
 
   constructor() { }
 

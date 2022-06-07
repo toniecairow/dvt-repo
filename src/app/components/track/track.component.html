@@ -1,35 +1,7 @@
 <span class="d-flex justify-content-between track">
     <span>
-        <span class="pr-2">1.</span>
-        <span>In my room</span>
+        <span class="pr-2">{{i}}.</span>
+        <span> {{ track?.title_short }} </span>
     </span>
-    <span>3:12</span>
-</span>
-<span class="d-flex justify-content-between track">
-    <span>
-        <span class="pr-2">2.</span>
-        <span>In my room</span>
-    </span>
-    <span>3:12</span>
-</span>
-<span class="d-flex justify-content-between track">
-    <span>
-        <span class="pr-2">3.</span>
-        <span>In my room</span>
-    </span>
-    <span>3:12</span>
-</span>
-<span class="d-flex justify-content-between track">
-    <span>
-        <span class="pr-2">4.</span>
-        <span>In my room</span>
-    </span>
-    <span>3:12</span>
-</span>
-<span class="d-flex justify-content-between track">
-    <span>
-        <span class="pr-2">5.</span>
-        <span>In my room</span>
-    </span>
-    <span>3:12</span>
+    <span>{{ (track?.duration / 60) | number : '1.2-2'  }}</span>
 </span>
