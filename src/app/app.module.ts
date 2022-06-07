@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './modules/material/material.module';
+
 import { AppComponent } from './app.component';
 import { ArtistsListViewComponent } from './pages/artists-list-view/artists-list-view.component';
 import { ArtistsDetailViewComponent } from './pages/artists-detail-view/artists-detail-view.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { TrackComponent } from './components/track/track.component';
-import { AlbumComponent } from './components/album/album.component';
-import { ArtistComponent } from './components/artist/artist.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +21,14 @@ import { ArtistComponent } from './components/artist/artist.component';
     ArtistsDetailViewComponent,
     TopNavComponent,
     TrackComponent,
-    AlbumComponent,
-    ArtistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
