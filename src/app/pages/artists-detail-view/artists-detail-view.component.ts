@@ -2,6 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DeezerDatasourceService } from 'src/app/services/deezer-datasource/deezer-datasource.service';
+import { Album } from 'src/app/types/album/album';
+import { Artist } from 'src/app/types/artist/artist';
+import { Track } from 'src/app/types/track/track';
 
 @Component({
   selector: 'app-artists-detail-view',
@@ -10,9 +13,9 @@ import { DeezerDatasourceService } from 'src/app/services/deezer-datasource/deez
 })
 export class ArtistsDetailViewComponent implements OnInit, OnDestroy {
   subscription = new Subscription();
-  artist: any;
-  top5Tracks: any[] = [];
-  albums: any[] = [];
+  artist: Artist | undefined;
+  top5Tracks: Track[] = [];
+  albums: Album[] = [];
 
   constructor(
     private deezerDataSourceService: DeezerDatasourceService,
