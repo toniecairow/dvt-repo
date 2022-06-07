@@ -1,20 +1,35 @@
 <app-top-nav></app-top-nav>
 
 <div class="container-fluid">
-    <div class="row p-4">
+    <div class="row p-4" *ngIf="artist">
         <div class="col-md-8 col-12">
-            <div style="background-image: url(https://images.unsplash.com/photo-1579463148228-138296ac3b98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80);" class="image-grid-cover">
+            <div [style.background]="'url(' + artist?.picture_xl + ')'" class="image-grid-cover">
                 <div class="cover-wrapper p-4">
-                    <h1>Etkinlikler</h1>
-                    <p><b>382K</b>fans</p>
+                    <h1>{{ artist?.name }}</h1>
+                    <p> <b>{{ artist?.nb_fan | number }}</b> Fans</p>
                 </div>
             </div>
         </div>
         <div class="col-4">
             <h3>Top tracks</h3>
-            <app-track></app-track>
+            <ng-container *ngIf="top5Tracks?.length">
+                <app-track [i]="i + 1" [track]="track" *ngFor="let track of top5Tracks; let i = index"></app-track>
+            </ng-container>
         </div>
     </div>
-    <app-album></app-album>
+    <div class="row" *ngIf="albums?.length">
+        <div class="col-12">
+            <h2>Albums</h2>
+        </div>
+        <div class="col-md-3 col-12" *ngFor="let album of albums">
+            <div class="album-cover">
+                <img [src]="album?.cover_big" alt="album">
+            </div>
+            <div class="my-3">
+                <h5> {{album?.title}} </h5>
+                <p> {{album?.release_date | date: 'mediumDate'}} </p>
+            </div>
+        </div>
+    </div>
 </div>
 
